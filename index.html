@@ -86,7 +86,9 @@
 
   .nav-cta:hover { background: var(--dark) !important; }
 
-
+  /* HERO — antes era un rectángulo verde saturado a todo lo ancho.
+     Ahora: fondo claro, y el color pasa a un panel arcilla más chico
+     detrás de las tarjetas, no a toda la sección. */
   .hero {
     background: var(--cream);
     padding: 56px 64px 90px;
@@ -167,7 +169,7 @@
 
   .btn-hero-outline:hover { background: rgba(42, 42, 31, 0.06); }
 
-  
+  /* Panel arcilla: el "rectángulo" ahora es chico, solo detrás de las 3 tarjetas */
   .hero-panel {
     background: linear-gradient(160deg, var(--clay) 0%, var(--clay-mid) 100%);
     border-radius: 24px;
@@ -361,7 +363,8 @@
   .val-title { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
   .val-text { font-size: 13px; line-height: 1.65; color: var(--text-soft); font-weight: 500; }
 
-  
+  /* FORMA DE TRABAJAR (de la dirección 1) — reemplaza el bloque verde grande
+     por tarjetas blancas sobre fondo claro. Mismo contenido que ya les gustó. */
   .forma-trabajo { padding: 100px 64px; background: var(--white); }
 
   .forma-trabajo-head { max-width: 620px; margin-bottom: 56px; }
@@ -438,8 +441,12 @@
     width: 100%;
     height: 420px;
     object-fit: cover;
-    object-position: center;
+    object-position: center 30%;
     display: block;
+  }
+
+  .equipo-card:first-child .equipo-photo {
+    object-position: center 45%;
   }
 
   .equipo-content { padding: 32px 28px; }
@@ -465,10 +472,6 @@
     line-height: 1.7;
     color: var(--text-soft);
     font-weight: 500;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
 
   /* MOBILE RESPONSIVE — tablets and below */
@@ -587,7 +590,7 @@
 
     .equipo h2 { font-size: 28px; margin-bottom: 16px; }
     .equipo-grid { grid-template-columns: 1fr; gap: 24px; margin-top: 32px; }
-    .equipo-photo { height: 320px; }
+    .equipo-photo { height: 260px; }
     .equipo-content { padding: 20px 16px; }
     .equipo-name { font-size: 16px; }
     .equipo-title { font-size: 12px; margin-bottom: 10px; }
@@ -693,7 +696,7 @@
     .equipo { padding: 40px 16px; }
     .equipo h2 { font-size: 24px; }
     .equipo-grid { gap: 16px; }
-    .equipo-photo { height: 300px; }
+    .equipo-photo { height: 240px; }
     .equipo-content { padding: 16px 14px; }
     .equipo-name { font-size: 15px; }
     .equipo-title { font-size: 11px; margin-bottom: 8px; }
@@ -749,10 +752,10 @@
     </svg>
   </div>
   <ul class="nav-links">
-    <li><a href="#">Nosotros</a></li>
-    <li><a href="#">Servicios</a></li>
-    <li><a href="#">Proyectos</a></li>
-    <li><a class="nav-cta" href="#">Escríbenos</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#equipo">Equipo</a></li>
+    <li><a class="nav-cta" href="tel:+56912345678">Llamar</a></li>
   </ul>
 </nav>
 
@@ -803,8 +806,8 @@
   <div class="metric"><div class="metric-num">NPS 9.2</div><div class="metric-label">satisfacción promedio</div></div>
 </div>
 
-<!-- PILARES -->
-<section class="pilares">
+<!-- SERVICIOS / PILARES -->
+<section class="pilares" id="servicios">
   <div class="pilares-header">
     <h2>Dos pilares,<br><em>un propósito.</em></h2>
     <p class="pilares-intro">Todo lo que hacemos en ESSER parte de dos convicciones: que las organizaciones se transforman a través de su gente, y que el acompañamiento real hace la diferencia.</p>
@@ -829,7 +832,7 @@
 </section>
 
 <!-- NOSOTROS -->
-<section class="nosotros">
+<section class="nosotros" id="nosotros">
   <div class="section-tag">Quiénes somos</div>
   <h2>Detrás de ESSER,<br>hay <span>gente de verdad.</span></h2>
   <div class="nosotros-layout">
@@ -870,7 +873,7 @@
 </section>
 
 <!-- EQUIPO -->
-<section class="equipo">
+<section class="equipo" id="equipo">
   <div class="section-tag">Nuestro equipo</div>
   <h2>Profesionales con<br><span>experiencia real.</span></h2>
   <div class="equipo-grid">
