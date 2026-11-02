@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ESSER — Consultores</title>
+<title>ESSER — Propuesta corregida</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -591,6 +592,7 @@
     .equipo h2 { font-size: 28px; margin-bottom: 16px; }
     .equipo-grid { grid-template-columns: 1fr; gap: 24px; margin-top: 32px; }
     .equipo-photo { height: 260px; }
+    .equipo-card .equipo-photo { height: 380px; object-position: center 15%; }
     .equipo-content { padding: 20px 16px; }
     .equipo-name { font-size: 16px; }
     .equipo-title { font-size: 12px; margin-bottom: 10px; }
@@ -697,6 +699,7 @@
     .equipo h2 { font-size: 24px; }
     .equipo-grid { gap: 16px; }
     .equipo-photo { height: 240px; }
+    .equipo-card .equipo-photo { height: 360px; object-position: center 15%; }
     .equipo-content { padding: 16px 14px; }
     .equipo-name { font-size: 15px; }
     .equipo-title { font-size: 11px; margin-bottom: 8px; }
@@ -704,6 +707,16 @@
 
     footer { padding: 32px 16px; gap: 20px; }
     .footer-msg { font-size: 20px; }
+  }
+  /* SERVICIOS (4 areas) */
+  .servicios-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .serv-lead { font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.5; margin-bottom: 10px; }
+  .serv-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; list-style: none; padding: 0; }
+  .serv-tags li { background: var(--forest-pale); color: var(--forest); font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 100px; }
+  @media (max-width: 768px) {
+    .servicios-grid { grid-template-columns: 1fr; gap: 16px; }
+    .serv-lead { font-size: 14px; }
+    .serv-tags li { font-size: 11px; }
   }
 </style>
 </head>
@@ -767,8 +780,8 @@
       <h1>Hacemos crecer<br>a las <span class="highlight">personas</span><br>y a las empresas.</h1>
       <p>Somos un equipo cercano y con experiencia que acompaña a organizaciones a desarrollar su potencial humano de forma real, efectiva y a largo plazo.</p>
       <div class="hero-btns">
-        <a href="#" class="btn-hero-primary">Ver servicios</a>
-        <a href="#" class="btn-hero-outline">Conocer el equipo</a>
+        <a href="#servicios" class="btn-hero-primary">Ver servicios</a>
+        <a href="#equipo" class="btn-hero-outline">Conocer el equipo</a>
       </div>
     </div>
 
@@ -806,27 +819,43 @@
   <div class="metric"><div class="metric-num">NPS 9.2</div><div class="metric-label">satisfacción promedio</div></div>
 </div>
 
-<!-- SERVICIOS / PILARES -->
+<!-- SERVICIOS -->
 <section class="pilares" id="servicios">
   <div class="pilares-header">
-    <h2>Dos pilares,<br><em>un propósito.</em></h2>
-    <p class="pilares-intro">Todo lo que hacemos en ESSER parte de dos convicciones: que las organizaciones se transforman a través de su gente, y que el acompañamiento real hace la diferencia.</p>
+    <div>
+      <div class="section-tag">Qué hacemos</div>
+      <h2>Soluciones concretas,<br><em>con foco en las personas.</em></h2>
+    </div>
+    <p class="pilares-intro">¿Cuál es el desafío de tu organización hoy? Trabajamos en cuatro áreas donde el impacto se siente en las personas y en los resultados.</p>
   </div>
-  <div class="pilares-grid">
+  <div class="servicios-grid">
     <div class="pilar-card">
       <div class="pilar-num">01</div>
-      <div class="pilar-title">Desarrollo Organizacional</div>
-      <div class="pilar-text">Diseño e implementación de procesos que fortalecen la cultura, la comunicación y la gestión del cambio.</div>
+      <div class="pilar-title">Cumplimiento y Entornos Seguros</div>
+      <p class="serv-lead">Cumplir la ley es el piso. Construir cultura es el techo.</p>
+      <div class="pilar-text">Te acompañamos en entender y aplicar la Ley Karin, enfoque de género, diversidad e inclusión y probidad. Diseñamos programas que ayudan a tu organización a desarrollar tu cultura, donde cada persona puede trabajar con seguridad, respeto y dignidad.</div>
+      <ul class="serv-tags"><li>Capacitación e Implementación Ley Karin</li><li>Enfoque de Género</li><li>Diversidad e Inclusión</li><li>Probidad y Transparencia</li></ul>
     </div>
     <div class="pilar-card">
       <div class="pilar-num">02</div>
-      <div class="pilar-title">Capacitación y Formación</div>
-      <div class="pilar-text">Programas a medida que potencian competencias técnicas y blandas, con foco en resultados reales y aplicables.</div>
+      <div class="pilar-title">Desarrollo de Equipos</div>
+      <p class="serv-lead">Equipos que se comunican mejor, lideran mejor y entregan mejores resultados.</p>
+      <div class="pilar-text">Programas de liderazgo, comunicación efectiva, trabajo en equipo y servicio al cliente. Todos diseñados a medida, sin contenidos genéricos. Lo que tus equipos aprenden con nosotros lo aplican de vuelta en su trabajo.</div>
+      <ul class="serv-tags"><li>Liderazgo</li><li>Comunicación</li><li>Trabajo en Equipo</li><li>Servicio al Cliente</li></ul>
     </div>
     <div class="pilar-card">
       <div class="pilar-num">03</div>
-      <div class="pilar-title">Gestión del Talento</div>
-      <div class="pilar-text">Acompañamos los procesos de selección, evaluación y retención del talento con metodologías actuales y eficientes.</div>
+      <div class="pilar-title">Consultoría Estratégica</div>
+      <p class="serv-lead">Para líderes que quieren transformar su organización sin perder el foco en las personas.</p>
+      <div class="pilar-text">Coaching ejecutivo, cultura organizacional, comunicación corporativa y sostenibilidad. Trabajamos con quienes toman decisiones para que esas decisiones tengan una dirección clara, una narrativa coherente y un impacto real en la organización.</div>
+      <ul class="serv-tags"><li>Coaching Ejecutivo</li><li>Comunicación Corporativa</li><li>Cultura Organizacional</li><li>Sostenibilidad</li></ul>
+    </div>
+    <div class="pilar-card">
+      <div class="pilar-num">04</div>
+      <div class="pilar-title">Neurociencias Aplicadas a Ventas</div>
+      <p class="serv-lead">Vende más entendiendo cómo piensan y deciden tus clientes.</p>
+      <div class="pilar-text">Neuroventas y psicología aplicada a la venta. Integramos ciencia del comportamiento con práctica comercial para que tus equipos conecten de manera más genuina con los clientes, reduzcan la fricción en el proceso de venta y conviertan ese entendimiento en resultados concretos.</div>
+      <ul class="serv-tags"><li>Neuroventas</li><li>Psicología Aplicada a la Venta</li></ul>
     </div>
   </div>
 </section>
@@ -839,20 +868,6 @@
     <div class="nos-left">
       <p>ESSER es una consultora chilena con más de 15 años acompañando a empresas en sus procesos de gestión de personas. <strong>Cada intervención la diseñamos a medida,</strong> porque cada organización tiene su propia historia y sus propios desafíos.</p>
       <p>Nuestro equipo tiene experiencia práctica en RRHH, formación, cultura organizacional y desarrollo de liderazgo. <strong>Entendemos tus desafíos porque los hemos vivido.</strong></p>
-      <div class="team-grid">
-        <div class="team-card">
-          <div class="team-avatar">👩‍💼</div>
-          <div class="team-info"><div class="team-name">Ana González</div><div class="team-role">Directora</div></div>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar">👨‍💻</div>
-          <div class="team-info"><div class="team-name">Carlos Muñoz</div><div class="team-role">Consultor Sr.</div></div>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar">👩‍🏫</div>
-          <div class="team-info"><div class="team-name">Paula Reyes</div><div class="team-role">Capacitación</div></div>
-        </div>
-      </div>
     </div>
 
     <div class="nos-right">
@@ -879,7 +894,7 @@
   <div class="equipo-grid">
 
     <div class="equipo-card">
-      <img src="Maria Carolina Galdames.jpg" alt="Ma. Carolina Galdames" class="equipo-photo">
+      <img src="equipo-carolina-galdames.jpg" alt="Ma. Carolina Galdames" class="equipo-photo">
       <div class="equipo-content">
         <div class="equipo-name">Ma. Carolina Galdames</div>
         <div class="equipo-title">ESPECIALISTA EN DESARROLLO ORGANIZACIONAL</div>
@@ -897,11 +912,38 @@
     </div>
 
     <div class="equipo-card">
-      <img src="Eduardo Bruna.jpg" alt="Eduardo Bruna" class="equipo-photo">
+      <img src="equipo-eduardo-bruna.jpg" alt="Eduardo Bruna" class="equipo-photo">
       <div class="equipo-content">
         <div class="equipo-name">Eduardo Bruna</div>
         <div class="equipo-title">ESPECIALISTA EN VENTAS Y DESARROLLO COMERCIAL</div>
         <p class="equipo-bio">Ingeniero Civil Industrial con Máster en Gestión de Operaciones. Con más de 17 años liderando áreas comerciales en empresas multinacionales, especializado en desarrollo de fuerzas de venta y comprensión del comportamiento del cliente.</p>
+      </div>
+    </div>
+
+    <div class="equipo-card">
+      <img src="equipo-vidia-gutierrez.jpg" alt="Vidia Gutiérrez" class="equipo-photo">
+      <div class="equipo-content">
+        <div class="equipo-name">Vidia Gutiérrez</div>
+        <div class="equipo-title">PERIODISTA · COMUNICACIÓN ORGANIZACIONAL, GÉNERO E INCLUSIÓN</div>
+        <p class="equipo-bio">Más de 20 años construyendo organizaciones más justas y comunicadas. Especializada en equidad de género, diversidad e inclusión de personas con discapacidad. Ha diseñado políticas, protocolos, campañas y programas de capacitación desde adentro de las instituciones y ahora los lleva como consultora a donde más se necesitan.</p>
+      </div>
+    </div>
+
+    <div class="equipo-card">
+      <img src="equipo-igor-grunewald.jpg" alt="Igor Grünewald Buscaglia" class="equipo-photo">
+      <div class="equipo-content">
+        <div class="equipo-name">Igor Grünewald Buscaglia</div>
+        <div class="equipo-title">INGENIERO CIVIL INDUSTRIAL · DOCENTE TÉCNICO-PROFESIONAL · RELATOR</div>
+        <p class="equipo-bio">Más de 15 años formando personas en el mundo del trabajo: emprendimiento, logística, ventas, calidad y gestión. Ha capacitado en empresas, municipios e instituciones de educación superior, con un promedio de satisfacción superior al 95%. Sabe tanto de industria como de aula; entiende que la mejor capacitación es la que se aplica el lunes siguiente.</p>
+      </div>
+    </div>
+
+    <div class="equipo-card">
+      <img src="equipo-aldo-cereceda.jpg" alt="Aldo Cereceda González" class="equipo-photo">
+      <div class="equipo-content">
+        <div class="equipo-name">Aldo Cereceda González</div>
+        <div class="equipo-title">PROFESOR DE EDUCACIÓN FÍSICA · GESTIÓN DE PERSONAS Y CALIDAD DE VIDA</div>
+        <p class="equipo-bio">Más de 30 años conectando el bienestar de las personas con el mundo del trabajo. Lleva desde 2007 en BancoEstado Microempresa, liderando áreas de deportes y recreación, cultura organizacional y gestión de personas. Emprendedor en asesorías deportivas para empresas. Como exseleccionado nacional de básquetbol sabe lo que es rendir bajo presión y construir equipo.</p>
       </div>
     </div>
 
